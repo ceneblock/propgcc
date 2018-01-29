@@ -220,7 +220,7 @@ ihex_bad_byte (bfd *abfd, unsigned int lineno, int c, bfd_boolean error)
       char buf[10];
 
       if (! ISPRINT (c))
-	sprintf (buf, "\\%03o", (unsigned int) c);
+	sprintf (buf, "\\%03o", (unsigned int) c & 0xff);
       else
 	{
 	  buf[0] = c;

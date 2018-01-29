@@ -3660,7 +3660,7 @@ main (int argc, char **argv)
 	  break;
 	case 'H':
 	  usage (stdout, 0);
-	  seenflag = TRUE;
+	  break;
 	case 'v':
 	case 'V':
 	  show_version = TRUE;

@@ -178,7 +178,7 @@ main (int argc, char **argv)
 	case 'H':
 	case 'h':
 	  usage (stdout, 0);
-
+	  break;
 	case 'n':
 	  string_min = (int) strtoul (optarg, &s, 0);
 	  if (s != NULL && *s != 0)
@@ -230,7 +230,7 @@ main (int argc, char **argv)
 
 	case '?':
 	  usage (stderr, 1);
-
+	  break;
 	default:
 	  numeric_opt = optind;
 	  break;

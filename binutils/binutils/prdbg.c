@@ -497,7 +497,7 @@ print_vma (bfd_vma vma, char *buf, bfd_boolean unsignedp, bfd_boolean hexp)
       else if (unsignedp)
 	sprintf (buf, "%lu", (unsigned long) vma);
       else
-	sprintf (buf, "%ld", (long) vma);
+	snprintf (buf, (sizeof(buf)/sizeof(buf[0])), "%ld", (long) vma);
     }
 #if BFD_HOST_64BIT_LONG_LONG
   else if (sizeof (vma) <= sizeof (unsigned long long))

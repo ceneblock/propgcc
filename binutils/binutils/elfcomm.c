@@ -163,7 +163,7 @@ byte_get_little_endian (unsigned char *field, int size)
 	  |    (((unsigned long) (field[1])) << 8)
 	  |    (((unsigned long) (field[2])) << 16)
 	  |    (((unsigned long) (field[3])) << 24);
-
+	//fall through
     default:
       error (_("Unhandled data length: %d\n"), size);
       abort ();
@@ -212,7 +212,7 @@ byte_get_big_endian (unsigned char *field, int size)
 	    |   (((unsigned long) (field[1])) << 16)
 	    |   (((unsigned long) (field[0])) << 24);
 	}
-
+	// fall through
     default:
       error (_("Unhandled data length: %d\n"), size);
       abort ();

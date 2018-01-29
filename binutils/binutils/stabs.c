@@ -2697,7 +2697,7 @@ parse_stab_members (void *dhandle, struct stab_handle *info,
 	      ++*pp;
 	      voffset &= 0x7fffffff;
 
-	      if (**pp == ';' || *pp == '\0')
+	      if (**pp == ';' || **pp == '\0')
 		{
 		  /* Must be g++ version 1.  */
 		  context = DEBUG_TYPE_NULL;
@@ -3430,6 +3430,7 @@ stab_xcoff_builtin_type (void *dhandle, struct stab_handle *info,
     case 9:
       name = "unsigned";
       rettype = debug_make_int_type (dhandle, 4, TRUE);
+      break;
     case 10:
       name = "unsigned long";
       rettype = debug_make_int_type (dhandle, 4, TRUE);

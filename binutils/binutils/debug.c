@@ -3156,6 +3156,7 @@ debug_type_samep (struct debug_handle *info, struct debug_type_s *t1,
 	     && t1->u.krange->upper == t2->u.krange->upper
 	     && debug_type_samep (info, t1->u.krange->type,
 				  t2->u.krange->type));
+      break;
 
     case DEBUG_KIND_ARRAY:
       ret = (t1->u.karray->lower == t2->u.karray->lower

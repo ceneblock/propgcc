@@ -237,9 +237,8 @@ bfd_get_full_section_contents (bfd *abfd, sec_ptr sec, bfd_byte **ptr)
       free (compressed_buffer);
       sec->contents = uncompressed_buffer;
       sec->compress_status = COMPRESS_SECTION_DONE;
-      /* Fall thru */
 #endif
-
+      return TRUE;
     case COMPRESS_SECTION_DONE:
       if (p == NULL)
 	{

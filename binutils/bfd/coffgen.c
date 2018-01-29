@@ -2042,8 +2042,9 @@ coff_print_symbol (bfd *abfd,
 				 auxp->u.auxent.x_scn.x_comdat);
 		      break;
 		    }
-		    /* Otherwise fall through.  */
+		    // fall through
 		case C_EXT:
+		  //fall through
 		case C_AIX_WEAKEXT:
 		  if (ISFCN (combined->u.syment.n_type))
 		    {
@@ -2062,7 +2063,7 @@ coff_print_symbol (bfd *abfd,
 			       llnos, next);
 		      break;
 		    }
-		  /* Otherwise fall through.  */
+		    // fall through
 		default:
 		  fprintf (file, "AUX lnno %d size 0x%x tagndx %ld",
 			   auxp->u.auxent.x_sym.x_misc.x_lnsz.x_lnno,
